@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mes Projets – Portfolio Ange</title>
+  <link rel="stylesheet" href="../styles/projet.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/profil.css">
+  <link rel="stylesheet" href="../styles/competence.css">
+  
+
+</head>
+<body>
+
+    <!-- navigation principale -->
+  <nav>
+     <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <ul id="menu" class="menu">
+   <li><a href="index.html">Accueil</a></li>
+   <li><a href="projet.html">Mes Projets</a></li>
+   <li><a href="contact.html">Contact</a></li>
+</nav>
+  
+
+   <header class="projets-header">
+    <h1>💻 Mes Projets</h1>
+      <div class="filtres">
+  <button onclick="filtrerProjets('tous')">Tous</button>
+  <button onclick="filtrerProjets('application-mobile')">Applications Mobile</button>
+  <button onclick="filtrerProjets('securite-web')">Sécurité Web</button>
+  <button onclick="filtrerProjets('site-vitrine')">Site Vitrine</button>
+  <button onclick="filtrerProjets('projet-academique')">Projets Académiques</button>
+</div>
+
+  </header>
+
+  <section class="grille-projets">
+
+    <div class="projet-card application-mobile">
+      <img src="../images/1.png" alt="Application Mobile">
+      <h3>Todo App Android</h3>
+      <p>Application mobile de Reservation pour une table et de commande des repas.</p>
+      <span class="tech">Kotlin • Firebase</span><br>
+      <a href="https://github.com/" target="_blank">Voir sur GitHub</a>
+    </div>
+
+    <div class="projet-card securite-web">
+      <img src="../images/2.png" alt="Sécurité Web">
+      <h3>Audit XSS/SQLi</h3>
+      <p>Projet d'analyse et de correction de failles XSS/SQLi dans des formulaires PHP.</p>
+      <span class="tech">Pentest • OWASP • PHP</span><br>
+      <a href="https://github.com/" target="_blank">Voir sur GitHub</a>
+    </div>
+
+    <div class="projet-card site-vitrine">
+      <img src="../images/3.jpg" alt="Site vitrine">
+      <h3>Portfolio Personnel</h3>
+      <p>Site vitrine responsive avec page d’accueil, projets, contact, animations et design UX.</p>
+      <span class="tech">HTML • CSS • JavaScript</span><br>
+      <a href="https://github.com/" target="_blank">Voir sur GitHub</a>
+    </div>
+
+    <div class="projet-card projet-academique">
+  <img src="../images/4.jpg" alt="Projet académique">
+  <h3>Bibliothèque Universitaire</h3>
+  <p>Application Java Swing de gestion de livres, membres et prêts. Projet tuteuré semestre 4.</p>
+  <span class="tech">Java • MySQL • MVC</span><br>
+  <a href="https://github.com/" target="_blank">Voir sur GitHub</a>
+</div>
+
+  </section>
+
+  <script>
+    function filtrerProjets(categorie) {
+      const projets = document.querySelectorAll('.projet-card');
+      projets.forEach(projet => {
+        if (categorie === 'tous' || projet.classList.contains(categorie)) {
+          projet.style.display = 'block';
+        } else {
+          projet.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

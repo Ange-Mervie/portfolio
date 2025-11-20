@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil - Angel</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/profil.css">
+    <link rel="stylesheet" href="../styles/competence.css">
+    <script src="../script.js"></script>
+
+
+</head>
+<body>
+  <!-- navigation principale -->
+  <nav>
+     <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <ul id="menu" class="menu">
+   <li><a href="index.html">Accueil</a></li>
+   <li><a href="projet.html">Mes Projets</a></li>
+   <li><a href="contact.html">Contact</a></li>
+</nav>
+  <!-- Section profil -->
+    <div class="profil fade-in">
+        <div class="texte">
+    <h1> Bienvenue a tous, Je me nomme Dague Nde Ange ! </h1>
+    <p>Je suis passionnée par le développement full-stack, l'intelligence Artificielle et la cybersécurité</p>
+    <p>Voici quelques infos sur moi :</p>
+    </div>
+     
+    <img src="../images/WhatsApp Image 2025-11-20 à 03.17.12_15e984a6.jpg" alt="Ma photo">
+    </div>
+<!-- Objectifs -->
+ <section class="Objectifs fade-in">
+    <h2> Objectifs </h2>
+    <ul>
+        <li>Devenir Developpeuse Web Full Stack</li>
+        <li>Maîtriser la sécurité des applications</li>
+        <li>Etre une expert en Data analyse</li>
+    </ul>
+   </section>
+<!-- Competences -->
+    <section class="competences fade-in">
+  <div class="texte">
+    <h2> Mes Compétences</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript & DOM</li>
+      <li>Utilisation de Cloud Computing</li>
+      <li>Application sur ODDO</li>
+      <li>Responsive Design</li>
+      <li>Configuration reseau avec CISCO</li>
+    </ul>
+  </div>
+
+  <img src="../images/pc.jpg" alt="Code" class="illustration">
+</section>
+
+  <!-- Bouton vers page de contact -->
+  <section class="contact-cta fade-in">
+    <h2> Vous souhaitez me contacter ?</h2>
+    <p>Je suis toujours disponible pour discuter de projets ou collaborations !</p>
+    <a href="contact.html" class="btn-contact">Me Contacter</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Dague Nde Ange – Tous droits réservés</p>
+    <p>📍 Retrouvez-moi sur <a href="https://github.com" target="_blank">GitHub</a></p>
+  </footer>
+  </form>
+ 
+<script>
+  const form = document.querySelector("form");
+
+  // Création d'une zone pour afficher les messages
+  const messageBox = document.createElement("p");
+  messageBox.style.fontWeight = "bold";
+  form.after(messageBox);
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nom = document.getElementById("nom").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Vérification des champs
+    if (nom === "" || email === "" || message === "") {
+      messageBox.style.color = "red";
+      messageBox.textContent = "Veuillez remplir toutes les cases avant d'envoyer le message.";
+      return;
+    }
+
+    // Si tout est rempli
+    messageBox.style.color = "green";
+    messageBox.textContent = "Message envoyé avec succès !";
+
+    // Réinitialisation du formulaire
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

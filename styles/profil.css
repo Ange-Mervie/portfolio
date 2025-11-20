@@ -1,0 +1,40 @@
+.profil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* espace entre texte et image */
+  gap: 40px; /* espace entre image et texte */
+  background-color: #d0bcbc;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: auto;
+}
+
+/*profil avec image a droitr */
+.profil img {
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid #edb0b0;
+}
+
+.profil .texte {
+  flex: 1;
+}
+
+/* Objectifs */
+.objectif {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.objectif h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+

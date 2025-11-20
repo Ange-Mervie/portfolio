@@ -1,0 +1,77 @@
+.projets-header {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.filtres {
+  margin: 15px 0;
+}
+
+.filtres button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filtres button:hover {
+  background-color: #004a99;
+}
+
+.grille-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.projet-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding: 15px;
+}
+
+.projet-card:hover {
+  transform: scale(1.03);
+}
+
+.projet-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.projet-card h3 {
+  margin: 15px 0 5px;
+  color: #0066cc;
+}
+
+.projet-card p {
+  font-size: 14px;
+  color: #444;
+  min-height: 60px;
+}
+
+.projet-card .tech {
+  font-size: 13px;
+  font-style: italic;
+  color: #888;
+}
+
+.projet-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
